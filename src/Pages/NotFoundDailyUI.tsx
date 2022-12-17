@@ -7,6 +7,7 @@ import Main from '../components/NotFoundDailyUI/Main';
 import RightIcons from '../components/NotFoundDailyUI/RightIcons';
 const Container = styled.div`
   width:100vw;
+  overflow:hidden;
   height:100vh;
   background-color:#E9D8A6;
   padding-left:71.8px;
