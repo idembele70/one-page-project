@@ -2,6 +2,8 @@ import React from 'react'
 
 import styled from 'styled-components';
 import Header from '../components/NotFoundDailyUI/Header';
+import LeftText from '../components/NotFoundDailyUI/LeftText';
+import Main from '../components/NotFoundDailyUI/Main';
 const Container = styled.div`
   width:100vw;
   height:100vh;
@@ -14,29 +16,17 @@ const Wrapper = styled.div`
   height:100%;
   padding-top:96.2px;
   padding-left: 85.51px;
+  background-image:url(${process.env.PUBLIC_URL}/assets/bg.png);
+  background-size: 100% 100%;
 `;
-const LeftText = styled.h5`
-  position: absolute;
-  font-family: 'Overlock';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
-  color: #AE2012;
-  top:50%;
-  transform:translateY(-50%) rotate(-90deg) ;
-  left:-132px;
-`;
-const Strong = styled.strong`
-`;
+
 const NotFoundDailyUI = () => {
   return (
     <Container>
-      <LeftText>
-      <Strong>404 Page</Strong> #DailyUI 008
-      </LeftText>
+   <LeftText/>
       <Wrapper>
         <Header/>
+        <Main/>
       </Wrapper>
     </Container>
   )
