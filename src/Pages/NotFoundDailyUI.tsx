@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from '../components/NotFoundDailyUI/Header';
 import LeftText from '../components/NotFoundDailyUI/LeftText';
 import Main from '../components/NotFoundDailyUI/Main';
+import RightIcons from '../components/NotFoundDailyUI/RightIcons';
 const Container = styled.div`
   width:100vw;
   height:100vh;
@@ -28,6 +29,7 @@ const NotFoundDailyUI = () => {
         <Header/>
         <Main/>
       </Wrapper>
+      <RightIcons/>
     </Container>
   )
 }
