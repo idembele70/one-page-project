@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/one-page-project/static/js/main.f135c516.js",
+    "index.html": "/one-page-project/index.html",
+    "main.f135c516.js.map": "/one-page-project/static/js/main.f135c516.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f135c516.js"
+  ]
+}
