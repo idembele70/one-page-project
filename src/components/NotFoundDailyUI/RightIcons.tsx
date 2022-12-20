@@ -20,6 +20,7 @@ const Container = styled.div<OpenProps>`
     transform: `translateX(${$isopen ? 0 : 149}px)`
   })};
   transition: transform 350ms ease-in;
+  z-index:2;
 `;
 const IconsContainer = styled.div`
   display:flex;

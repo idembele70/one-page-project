@@ -8,7 +8,7 @@ const Container = styled.header`
   justify-content:space-between;
   flex-wrap:wrap;
   max-width: 1151.19px;
-  z-index:3;
+  background-color:#BB3E03;
   ${lgDown({
    maxWidth:"80%",
     height:52,
@@ -18,7 +18,7 @@ const Container = styled.header`
     top:50,
     right:0,
     left:150,
-    paddingRight:24
+    paddingRight:24,
   })}
   ${
     smDown({
@@ -54,7 +54,7 @@ const NavContainer = styled.div<NavProps>`
     width: 'calc(100% - 24px)',
     backgroundColor:"#AE2012",
     position:"absolute",
-    top:62,
+    top:52,
     borderTop: "1px solid #E9D8A6",
     height:isOpen === "true" ? 265 : 0,
   })}
