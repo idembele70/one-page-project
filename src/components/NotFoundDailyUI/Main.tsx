@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { lgDown, mdDown } from '../responsive';
 
 const Container = styled.div`
  margin-top:104.75px;
+ ${mdDown({
+  marginTop:0
+ })}
 `;
 const TitleContainer = styled.div`
   display:flex;

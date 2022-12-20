@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
-import { MdDesktopDown, MdDesktopUp } from '../responsive';
+import { lgDown, lgUp, mdUp } from '../responsive';
 import { Link } from 'react-router-dom';
 interface OpenProps {
-  isOpen:boolean;
+  //isopen:string;
+  $isopen:boolean;
 }
 const Container = styled.div<OpenProps>`
   position:fixed;
@@ -14,8 +15,9 @@ const Container = styled.div<OpenProps>`
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(21.3778px);
   padding: 190px 49px;
-  ${({isOpen})=> MdDesktopDown({
-    transform: `translateX(${isOpen ? 0 : 149}px)`
+  ${({$isopen})=> lgDown({
+    //transform: `translateX(${isopen === "true" ? 0 : 149}px)`
+    transform: `translateX(${$isopen ? 0 : 149}px)`
   })};
   transition: transform 350ms ease-in;
 `;
@@ -34,27 +36,30 @@ const StyledIcon = styled(Icon)`
   color: #E9D8A6;
   font-size:45px;
   `;
+//transform:translateY(-50%) rotate( ${({ isopen }) => isopen === "true" ? 0 : 180}deg);
 const FixedIcon = styled(Icon)<OpenProps>`
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 color: #E9D8A6;
   position:absolute;
   left:-50px;
   top:50%;
-  transform:translateY(-50%) rotate(${({ isOpen }) => isOpen ? 0 : 180}deg);
+  transform:translateY(-50%) rotate(${({ $isopen }) => $isopen? 0 : 180}deg);
   font-size:45px;
   cursor:pointer;
   transition: transform 350ms ease-in;
-  ${MdDesktopUp({
+  ${lgUp({
     display: 'none'
   })}
 `;
 const RightIcons = () => {
+  //const [isOpen, setIsOpen] = useState("false");
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => { 
+   // setIsOpen(isOpen === "true" ? "false" :"true")
     setIsOpen(!isOpen)
    }
   return (
-    <Container isOpen={isOpen}>
+    <Container $isopen={isOpen}>
       <IconsContainer>
         <IconContainer to="/">
         <StyledIcon icon="ion:logo-instagram"/>
@@ -69,7 +74,10 @@ const RightIcons = () => {
         <StyledIcon icon="ant-design:facebook-outlined"/>
         </IconContainer>
       </IconsContainer>
-      <FixedIcon isOpen={!isOpen} onClick={handleOpen} icon="material-symbols:chevron-left"/>
+      <FixedIcon $isopen={
+        // isOpen === "true" ? "false" : "true"
+        !isOpen
+        } onClick={handleOpen} icon="material-symbols:chevron-left"/>
     </Container>
   )
 }

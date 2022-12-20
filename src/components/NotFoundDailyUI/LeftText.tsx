@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { smDown } from '../responsive';
 const Container = styled.h5`
   position: absolute;
   font-family: 'Overlock';
@@ -11,6 +12,12 @@ const Container = styled.h5`
   top:50%;
   transform:translateY(-50%) rotate(-90deg) ;
   left:-132px;
+  ${
+    smDown({
+      fontSize:"25px",
+      left:-100
+    })
+  }
 `;
 const Strong = styled.strong`
 `;

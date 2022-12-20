@@ -5,12 +5,16 @@ import Header from '../components/NotFoundDailyUI/Header';
 import LeftText from '../components/NotFoundDailyUI/LeftText';
 import Main from '../components/NotFoundDailyUI/Main';
 import RightIcons from '../components/NotFoundDailyUI/RightIcons';
+import { mdDown, smDown } from '../components/responsive';
 const Container = styled.div`
   width:100vw;
   overflow:hidden;
   height:100vh;
   background-color:#E9D8A6;
   padding-left:71.8px;
+  ${smDown({
+    paddingLeft:35
+  })}
 `;
 const Wrapper = styled.div`
   background-color:#BB3E03;
@@ -20,6 +24,7 @@ const Wrapper = styled.div`
   padding-left: 85.51px;
   background-image:url(${process.env.PUBLIC_URL}/assets/bg.png);
   background-size: 100% 100%;
+  ${mdDown({padding:"104px 0 0"})}
 `;
 
 const NotFoundDailyUI = () => {
