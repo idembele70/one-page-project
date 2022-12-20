@@ -8,6 +8,7 @@ const Container = styled.header`
   justify-content:space-between;
   flex-wrap:wrap;
   max-width: 1151.19px;
+  z-index:3;
   ${lgDown({
    maxWidth:"80%",
     height:52,

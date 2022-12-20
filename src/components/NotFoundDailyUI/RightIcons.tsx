@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
-import { lgDown, lgUp, mdUp } from '../responsive';
+import { lgDown, lgUp, mdUp, smDown } from '../responsive';
 import { Link } from 'react-router-dom';
 interface OpenProps {
   //isopen:string;
@@ -47,6 +47,7 @@ color: #E9D8A6;
   font-size:45px;
   cursor:pointer;
   transition: transform 350ms ease-in;
+  z-index:2;
   ${lgUp({
     display: 'none'
   })}

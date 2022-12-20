@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { lgDown, mdDown } from '../responsive';
+import { lgDown, mdDown, smDown } from '../responsive';
 
 const Container = styled.div`
- margin-top:104.75px;
+ margin-top:1%;
  ${mdDown({
   marginTop:0
  })}
@@ -12,6 +12,7 @@ const Container = styled.div`
 const TitleContainer = styled.div`
   display:flex;
   justify-content:center;
+  align-items:center;
 `;
 const Four = styled.h1`
   font-family: 'Overlock';
@@ -23,9 +24,25 @@ const Four = styled.h1`
   align-items: center;
   text-align: right;
   color: #E9D8A6;
+  ${mdDown({
+    fontSize:"calc(219px + 2.1vw)",
+    height:"auto"
+  })}
+  ${
+    smDown({
+      fontSize:"calc(130px + 1.4vw)",
+    })
+  }
 `;
 const ZeroImg = styled.img`
   height:334.5px;
+  ${mdDown({
+    height:"calc(219px + 2.1vw)"
+  })};
+    ${
+    smDown({
+      height:"calc(130px + 1.4vw)",
+    })}
 `;
 const Paragraph = styled.p`
   font-family: 'Overlock';
@@ -36,6 +53,14 @@ const Paragraph = styled.p`
   color: #E9D8A6;
   text-align:center;
   margin-bottom:61.87px;
+  ${mdDown({
+    maxWidth:"50%",
+    margin: "0 auto 24px",
+    lineHeight:"initial"
+  })}
+  ${smDown({
+    fontSize:16
+  })}
 `;
 const ButtonContainer = styled.div`
   display:flex;
@@ -60,6 +85,10 @@ const Button = styled(Link)`
     background-color:#E9D8A6;
     color: #BB3E03;
   }
+  ${smDown({
+    padding: "12px 24px",
+    marginBottom:40
+  })}
 `;
 const Help = styled.p`
   font-family: 'Overlock';
@@ -68,6 +97,10 @@ const Help = styled.p`
   font-size: 19.24px;
   line-height: 23px;
   color: rgba(233, 216, 166, 0.7);
+  ${mdDown({
+    textAlign:"center",
+    marginTop:40
+  })}
   `;
 const HelpLink = styled(Link)`
   font-family: 'Overlock';
